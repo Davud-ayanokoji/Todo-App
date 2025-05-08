@@ -1,17 +1,22 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-// import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-// import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
-import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+// import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import { v4 as uuidv4 } from "uuid";
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import "./TodoList.css";
 
 export default function TodoList() {
-  let [todos, setTodos] = useState([
-    { task: "Open Todo", id: uuidv4(), isDone: false },
-  ]);
+    
 
-  let [newTodo, setNewTodo] = useState("");
+    // **Extracted logic outside the useState hook**
+    const savedTodos = localStorage.getItem("todos");
+    const initialTodos = savedTodos ? JSON.parse(savedTodos) : [{ task: "Open Todo", id: uuidv4(), isDone: false }];
+    
+    // **State initialization**
+    const [todos, setTodos] = useState(initialTodos);  // Using initialTodos to initialize state
+    const [newTodo, setNewTodo] = useState("");
+
+  
 
   let addNewTask = () => {
     if (newTodo.trim() === "") return;
@@ -47,6 +52,12 @@ export default function TodoList() {
       prevTodos.map((todo) => ({ ...todo, isDone: true }))
     );
   };
+
+    // Save todos to localStorage whenever todos change
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+    }, [todos]);
+
 
   return (
     <div className="todo-app">
