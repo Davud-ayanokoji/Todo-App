@@ -40,7 +40,7 @@ Your app will run at http://localhost:3000.
 🔗 Live Demo
 Click here to view the live app
 
-<!-- (https://todo-app-plum-omega.vercel.app/) -->
+<!-- [(https://todo-app-plum-omega.vercel.app/)] -->
 
 
 Made with ❤️ by Sharieff Md
