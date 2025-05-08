@@ -1,16 +1,47 @@
-<<<<<<< HEAD
-# React + Vite
+# 📝 React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and modern Todo App built using **React.js**, showcasing functional components, `useState` hooks, and UUID-based unique task management. This project helps users add, manage, and track tasks efficiently with a responsive design and smooth interactions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ➕ Add new tasks
+- ✅ Mark individual or all tasks as done
+- ❌ Delete tasks
+- 🧠 Prevents adding empty tasks
+- 🎨 Stylish and responsive UI using custom CSS
+- 🔒 Unique IDs for tasks using `uuid`
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Todo-App
->>>>>>> 23691c0e15e261df9fc94e760b53a12301858668
+- **Frontend:** React.js (functional components + hooks)
+- **Styling:** Vanilla CSS (with custom properties / `:root`)
+- **Unique ID Generation:** [`uuid`](https://www.npmjs.com/package/uuid)
+
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/MdSharieff-081/Todo-App.git
+cd Todo-App
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm start
+```
+Your app will run at http://localhost:3000.
+
+🔗 Live Demo
+Click here to view the live app
+
+👉 https://todo-app-plum-omega.vercel.app/
+
+
+Made with ❤️ by Sharieff Md
+
